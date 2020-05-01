@@ -1,0 +1,34 @@
+.ListItem__wrapper {
+    margin: 0 0 50px;
+    padding: 50px 30px;
+    display: flex;
+    list-style: none;
+}
+
+.listItem__image {
+   width: 150px;
+    height: 150px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+
+.listItem__name {
+    margin: 0;
+    color: salmon;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.listItem__description {
+    font-weight: 300;
+}
+
+.listItem__button {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-family: 'Baloo Tamma 2', sans-serif;
+    font-weight: 500;
+    background: none;
+    border: 2px solid salmon;
+    color: salmon;
+}
