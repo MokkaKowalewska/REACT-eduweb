@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Form = () => (
-    <form>
+const Form = ({submitFn}) => (
+    <form onSubmit={submitFn}>
         <input placeholder="name" name="name" />
         <input placeholder="link" name="link" />
         <input placeholder="image" name="image" />
         <textarea placeholder="description" name="description" />
-        <button>add new item</button>
+        <button type="submit">add new item</button>
     </form>
 
 );
