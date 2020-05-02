@@ -1,44 +1,43 @@
-import React from 'react';
-import Proptypes from 'prop-types';
-import './ListItem.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./ListItem.module.scss";
 
-const ListItem = ({
-    name,
-    description,
-    image,
-    twitterLink
-}) => (
-    <li className="ListItem__wrapper">
-        <img
-            src={image}
-            className ="listItem__image"
-            alt="{name}" />
-        <div>
-            <h2
-            className="listItem__name">
-                {name}
-            </h2>
-            <p
-            className="listItem__description">
-                {description}
-            </p>
-            <a href={twitterLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="listItem__button">visit twitter page</a>
-        </div>
+const ListItem = ({ image, name, description, twitterLink }) => {
+  const ImageTag = image ? "img" : "div";
+
+  return (
+    <li className={styles.wrapper}>
+      <ImageTag
+        src={image}
+        className={image ? styles.image : styles.imageNone}
+        alt={name}
+      />
+      <div>
+        <h2 className={styles.name}>{name}</h2>
+        <p className={styles.description}>{description}</p>
+        <a
+          href={twitterLink}
+          target="_blank"
+          className={styles.button}
+          rel="noopener noreferrer"
+        >
+          visit twitter page
+        </a>
+      </div>
     </li>
-);
+  );
+};
 
 ListItem.propTypes = {
-    name: Proptypes.string.isRequired,
-    description: Proptypes.string.isRequired,
-    image: Proptypes.string,
-    twitterLink: Proptypes.string.isRequired,
-}
+  image: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  twitterLink: PropTypes.string.isRequired,
+};
 
 ListItem.defaultProps = {
-    description: "ashdhasdasdjasgd",
-}
+  image: null,
+  description: "One of the React creators",
+};
 
 export default ListItem;

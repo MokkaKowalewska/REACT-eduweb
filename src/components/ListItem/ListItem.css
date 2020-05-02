@@ -1,34 +1,55 @@
-.ListItem__wrapper {
-    margin: 0 0 50px;
-    padding: 50px 30px;
-    display: flex;
-    list-style: none;
-}
+@keyframes appear {
+    0% {
+      opacity: 0;
+      top: 35px;
+    }
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
 
-.listItem__image {
-   width: 150px;
-    height: 150px;
-    margin-right: 50px;
-    border-radius: 50%;
-}
+  .wrapper {
+      list-style: none;
+      padding: 50px 30px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      animation: appear .5s ease;
+  }
 
-.listItem__name {
-    margin: 0;
-    color: salmon;
-    font-weight: 700;
-    font-size: 2rem;
-}
+  .image {
+      flex-shrink: 0;
+      margin-right: 30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+  }
 
-.listItem__description {
-    font-weight: 300;
-}
+  .imageNone {
+    @extend .image;
 
-.listItem__button {
-    padding: 5px 10px;
-    text-decoration: none;
-    font-family: 'Baloo Tamma 2', sans-serif;
-    font-weight: 500;
-    background: none;
-    border: 2px solid salmon;
-    color: salmon;
-}
+    background: url('https://unsplash.it/200/200') no-repeat;
+    background-size: cover;
+  }
+
+  .name {
+      margin: 0;
+      color: #1E58FF;
+      font-weight: 700;
+  }
+
+  .description {
+      margin: 10px 0 20px;
+      font-weight: 300;
+  }
+
+  .button {
+      font-size: 10px;
+      text-decoration: none;
+      padding: 7px 12px;
+      font-weight: 500;
+      background: none;
+      border: 2px solid #1E58FF;
+      color: #1E58FF;
+  }
