@@ -1,13 +1,12 @@
 import React from 'react';
-import './Form.css';
+import styles from './Form.module.scss';
 
 const Form = ({submitFn}) => (
-    <div className="form__wrapper">
-        <h2>Add new twitter account</h2>
+    <div className={styles.wrapper}>
+        <h2>Add new ssstwitter account</h2>
         <form
             className="form__form"
-            onSubmit={submitFn}
-        >
+            onSubmit={submitFn}>
             <div className="form__item">
                 <input
                     type="text"
