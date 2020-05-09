@@ -1,9 +1,12 @@
 .wrapper {
-  width: 50%;
-  margin: 50px auto 100px;
+  width: 70%;
+  height: 70vh;
+  overflow: scroll;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 10px;
 }
 
 
@@ -14,4 +17,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
 }
