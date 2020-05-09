@@ -1,7 +1,9 @@
 import React from "react";
-import List from "./components/List/List";
-import "./index.css";
-import Form from "./components/Form/Form";
+import "../../index.css";
+import TwittersView from '../TwittersView/TwittersView';
+import ArticlesView from '../ArticlesView/ArticlesView';
+import NotesView from '../NotesView/NotesView';
+
 
 const initialStateItems = [
   {
@@ -37,8 +39,7 @@ class Root extends React.Component {
   render() {
     return (
       <div>
-        <List items={this.state.items} />
-        <Form submitFn={this.addItem} />
+        <h1>hello world</h1>
       </div>
     );
   }
