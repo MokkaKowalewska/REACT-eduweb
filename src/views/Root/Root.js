@@ -20,7 +20,7 @@ const initialStateItems = [
 class Root extends React.Component {
   state = {
     items: [...initialStateItems],
-    isModalOpen: false,
+    isModalOpen: true,
   };
 
   addItem = e => {
@@ -46,6 +46,12 @@ class Root extends React.Component {
     })
   }
 
+  closeModal = () => {
+    this.setState({
+        isModalOpen: false,
+    })
+  }
+
   render() {
     const { isModalOpen } = this.state;
 
@@ -58,7 +64,9 @@ class Root extends React.Component {
       <Route path="/articles" component={ArticlesView} />
       <Route path="/notes" component={NotesView} />
       </Switch>
-      { isModalOpen && <Modal /> }
+      { isModalOpen && <Modal
+      closeModalFn={this.closeModal}
+      /> }
 
       </>
       </BrowserRouter>
