@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import AppContext from "../../context";
+import List from "../../components/List/List";
 
 const NotesView = () => (
-
-    <h2>This is Notes view.</h2>
-
+  <AppContext.Consumer>
+    {(context) => <List items={context.note} />}
+  </AppContext.Consumer>
 );
 
 export default NotesView;
